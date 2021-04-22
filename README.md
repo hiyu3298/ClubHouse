@@ -1,24 +1,39 @@
-# README
+# Club House
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+都心部や移住したてであれば、その地域のスポーツチームについては、 ほとんど情報がありません。 また、連絡を行う手段や連絡方法が気軽に行えない状態であり、 集団での部活動は会社内のメンバーに限られたりと、 活動を行うことのできる範囲や人物に制限が生じています。 このような問題を解決するため、気軽にチームを作成、検索でき、 見学や体験の予約を行えるように 『Club House』という WEB アプリケーションを制作しました。
 
-* Ruby version
+### サイトテーマ
 
-* System dependencies
+ユーザー機能を持ち、活動を行う団体と団体へ所属したい社会人を気軽にマッチングできるサイト
 
-* Configuration
+### テーマを選んだ理由
 
-* Database creation
+知らない土地や団体をよく知る知人がいない場合は、団体自体を知る機会があまりなく、
+知るための情報が記載されているサイトもあまりないことが現状です。
+また、SNS での募集や情報発信を行っている団体もありますが、
+現状では見学や体験予約が気軽に行えないような状態のため、この様なサイトを制作しようと考えました。
 
-* Database initialization
+### ターゲットユーザ
 
-* How to run the test suite
+活動しているチームに新たなメンバーがほしい団体責任者（管理者）
+活動しているチームに所属したいと考えている社会人（利用者）
 
-* Services (job queues, cache servers, search engines, etc.)
+### 主な利用シーン
 
-* Deployment instructions
+社会人の趣味を団体で行いたい場合や団体を探したい方に利用していただく
 
-* ...
+## 設計書
+
+### 機能一覧
+
+<https://docs.google.com/spreadsheets/d/1axe0raENT1gD8r0Iv65O0_6MCxDOkDlev5Q6f5q8k94/edit?usp=sharing>
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- 仮想環境：Vagrant,VirtualBox
