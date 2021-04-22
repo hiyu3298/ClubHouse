@@ -1,0 +1,24 @@
+<div class="jumbotron jumbotron-fluid main-img">
+  <div class="container">
+    <h1 class="mb-5" style="text-height:100%; position: absolute; bottom:20%; right: 10%; color:#444; font-family:monospace;"></h1>
+  </div>
+</div>
+<h1 class="text-center" style="letter-spacing:0.15em;">タイムライン</h1>
+  <div class="border mb-4 mx-auto" style="width:10%">
+    <div class="row">
+      <% @post_images.each do |post_image| %>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-3">
+            <%= attachment_image_tag post_image, :image, format: 'jpeg', class: "bd-placeholder-img card-img-top", height: "180" %>
+            <div class="card-body">
+              <h5 class="card-title"><%= post_image.name %></h5>
+              <p class="card-text"><%= post_image.tweet %></p>
+              <%= link_to "詳細を見る", admins_post_images_path(post_image.id), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<%= link_to "新規登録", new_admins_post_image_path, class:"btn btn-primary btn-block btn-base-1 mt-20" %>
