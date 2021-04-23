@@ -14,10 +14,12 @@ Rails.application.routes.draw do
   namespace :admins do
     root 'post_images#index'
     resources :post_images, only: [:new, :create, :index, :show, :destroy]
+    resources :admins, only: [:show, :edit, :update]
   end
 
   scope module: 'users' do
-
+    root 'home#top'
+    resources :users, only: [:show, :edit, :update]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

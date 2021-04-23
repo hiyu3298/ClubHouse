@@ -11,7 +11,7 @@
           <div class="card mb-3">
             <%= attachment_image_tag post_image, :image, format: 'jpeg', class: "bd-placeholder-img card-img-top", height: "180" %>
             <div class="card-body">
-              <h5 class="card-title"><%= post_image.name %></h5>
+              <h5 class="card-title"><%= post_image.practice_name %></h5>
               <p class="card-text"><%= post_image.tweet %></p>
               <%= link_to "詳細を見る", admins_post_images_path(post_image.id), class: "btn btn-primary" %>
             </div>
