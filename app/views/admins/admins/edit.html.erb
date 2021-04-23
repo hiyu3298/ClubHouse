@@ -1,0 +1,39 @@
+<% if @admin.errors.any? %>
+  <div id="error_explanation" class="alert alert-danger">
+    <ul>
+      <% @admin.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="col-xs-3">
+  <h2>チーム詳細変更</h2>
+  <%= form_with model: [:admins,@admin], local:true do |f| %>
+
+  <div class="field">
+    <%= f.label :team_name %><br />
+    <%= f.text_field :team_name, autofocus: true, autocomplete: "team_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :genre %><br />
+    <%= f.text_field :genre, autofocus: true, autocomplete: "genre" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+    <%= f.submit "変更する", class: "btn btn-primary mb-4" %>
+  <% end %>
+</div>
