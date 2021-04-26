@@ -5,5 +5,6 @@ class Users::TeamsController < ApplicationController
 
   def show
     @team = Admin.find(params[:id])
+    @post_images = PostImage.where(admin_id: params[:id]).all
   end
 end
