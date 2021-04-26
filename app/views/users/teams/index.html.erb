@@ -1,0 +1,23 @@
+<h2>チーム一覧</h2>
+
+<table class="table table-striped bg-light">
+  <thead>
+    <tr>
+      <th>チーム</th>
+      <th>活動場所</th>
+      <th>メールアドレス</th>
+      <th>ジャンル</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teams.each do |team| %>
+      <tr>
+        <td><%= link_to team.team_name, team_path(team) %></td>
+        <td><%= team.address %></td>
+        <td><%= team.email %></td>
+        <td><%= team.genre %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
