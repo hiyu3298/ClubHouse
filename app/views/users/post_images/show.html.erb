@@ -3,8 +3,18 @@
   <p>タイトル：<%= @post_image.practice_name %></p>
   <p>つぶやき：<%= @post_image.tweet %></p>
   <p>投稿日時：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
-  <% if @post_image.admin == current_admin %>
-    <%= link_to "削除", admins_post_image_path(@post_image), method: :delete %>
+  <% if @post_image.favorited_by?(current_user) %>
+    <p>
+      <%= link_to post_image_favorites_path(@post_image), method: :delete do %>
+        ♥<%= @post_image.favorites.count %> いいね
+      <% end %>
+    </p>
+    <% else %>
+    <p>
+      <%= link_to post_image_favorites_path(@post_image), method: :post do %>
+        ♡<%= @post_image.favorites.count %> いいね
+      <% end %>
+    </p>
   <% end %>
 </div>
 
