@@ -29,6 +29,9 @@
               <%= link_to "　チーム一覧", "#", style: "color: white" %>
             </li>
             <li class="nav-item">
+              <%= link_to "　タイムライン", post_images_path, style: "color: white" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "　ログアウト", destroy_user_session_path, method: :delete, style: "color: white" %>
             </li>
           <% elsif admin_signed_in? %>
