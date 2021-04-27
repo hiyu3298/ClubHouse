@@ -1,11 +1,5 @@
 <h2>チーム一覧</h2>
 
-<%= form_tag(teams_search_path,:method => 'get') do %>
-  <%= label_tag '地域で検索' %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search', :address => nil %>
-<% end %>
-
 <table class="table table-striped bg-light">
   <thead>
     <tr>

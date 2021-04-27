@@ -7,4 +7,8 @@ class Users::TeamsController < ApplicationController
     @team = Admin.find(params[:id])
     @post_images = PostImage.where(admin_id: params[:id]).all
   end
+
+  def search
+    @teams = Admin.search(params[:search])
+  end
 end
