@@ -28,6 +28,15 @@
 
 ### 機能一覧
 
+利用者新規登録機能
+チーム新規登録機能
+利用者ログイン機能
+チームログイン機能
+チーム活動状況投稿機能
+投稿に対するコメント機能
+投稿に対するいいね機能
+
+
 <https://docs.google.com/spreadsheets/d/1axe0raENT1gD8r0Iv65O0_6MCxDOkDlev5Q6f5q8k94/edit?usp=sharing>
 
 ## 開発環境
