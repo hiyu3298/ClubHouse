@@ -1,0 +1,7 @@
+<h1>予約可能日を追加</h1>
+
+<%= form_with model: [:admins,@reservation], local:true do |f| %>
+  <%= f.datetime_select :start_time, class:"form_control", placeholder:"開始時間" %>
+  <%= f.datetime_select :end_time, class:"form_control", placeholder:"終了時間" %>
+  <%= f.submit '登録', class:"btn btn-lg btn-block btn-info mt-4" %>
+<% end %>

@@ -35,7 +35,7 @@
 チーム活動状況投稿機能
 投稿に対するコメント機能
 投稿に対するいいね機能
-
+チーム検索機能
 
 <https://docs.google.com/spreadsheets/d/1axe0raENT1gD8r0Iv65O0_6MCxDOkDlev5Q6f5q8k94/edit?usp=sharing>
 

@@ -1,6 +1,7 @@
 class Admins::AdminsController < ApplicationController
   def show
     @admin = current_admin
+    @reservations = Reservation.all
   end
 
   def edit

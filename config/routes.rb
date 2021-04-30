@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     root 'post_images#index'
     resources :post_images, only: [:new, :create, :index, :show, :destroy]
     resources :admins, only: [:show, :edit, :update]
+    resources :reservations
   end
 
   scope module: 'users' do
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
     get 'teams/search', to: 'teams#search'
     resources :users, only: [:show, :edit, :update]
     resources :teams, only: [:index, :show]
+    resources :reservations
     resources :post_images, only: [:new, :create, :index, :show, :destroy] do
       resources :post_comments, only: [:create, :destroy]
       resource :favorites, only: [:create, :destroy]
