@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   }
 
   namespace :admins do
-    root 'post_images#index'
+    root 'admins#show'
     resources :post_images, only: [:new, :create, :index, :show, :destroy]
     resources :admins, only: [:show, :edit, :update]
     resources :reservations

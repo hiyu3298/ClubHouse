@@ -1,5 +1,5 @@
 <h1>マイチームページ</h1>
-<div class="row">
+<div class="center-block">
   <div class="col-10">
 
 
@@ -25,15 +25,16 @@
   </table>
 
   <%= link_to "マイチームの内容を変更する", edit_admins_admin_path(@admin), class: "btn btn-primary mb-4" %><br>
-</div>
 
-<%= month_calendar events: @reservations do |date, reservations| %>
-  <%= date %>
+  <%= month_calendar events: @reservations do |date, reservations| %>
+    <%= date.day %>
 
-  <% @reservations.each do |reservation| %>
-    <div>
-      <%= reservation.start_time.hour %>:<%= reservation.start_time.min %>
-    </div>
+    <% reservations.each do |reservation| %>
+      <div>
+        <%= link_to reservation.start_time.strftime('%H:%M'), edit_admins_reservation_path %>からの予定
+      </div>
+    <% end %>
   <% end %>
-<% end %>
-<%= link_to '体験予約日を設定', new_admins_reservation_path %>
+  <%= link_to '体験予約日を設定', new_admins_reservation_path %>
+
+</div>
